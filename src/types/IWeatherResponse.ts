@@ -42,4 +42,24 @@ export interface IWeatherResponse {
     time: string[];
     temperature_2m: number[];
   };
+
+  daily_units: {
+    time: string; // e.g. "iso8601"
+    temperature_2m_max: string; // °C
+    temperature_2m_min: string; // °C
+    precipitation_sum: string; // mm
+    windspeed_10m_max: string; // km/h
+    sunrise: string; // ISO
+    sunset: string; // ISO
+  };
+
+  daily: {
+    time: string[];
+    temperature_2m_max: number[];
+    temperature_2m_min: number[];
+    precipitation_sum: number[];
+    windspeed_10m_max: number[];
+    sunrise: string[];
+    sunset: string[];
+  };
 }
