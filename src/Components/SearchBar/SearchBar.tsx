@@ -48,7 +48,7 @@ export const SearchBar = () => {
       <form className="flex  flex-row justify-center items-center" onSubmit={(e) => handleSubmit(e)}>
         <input type="text" placeholder="Buscar ciudad/país..." className="bg-white px-2 py-1 relative select-none focus:outline-none" value={searchGeolocation} onChange={(e) => handleChange(e)} />
         {arrayGeolocations.length > 1 && (
-          <ul className="bg-white absolute top-10  rounded  z-10 h-[300px] overflow-auto">
+          <ul className="bg-white absolute top-12  rounded  z-10 h-[300px] overflow-auto">
             {arrayGeolocations.map((location, index) => (
               <LocationCard key={index} location={location} />
             ))}
