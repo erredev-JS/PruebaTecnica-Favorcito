@@ -51,7 +51,7 @@ export const TempHero = () => {
         <p className="text-2xl">
           Ahora <br /> <span className="font-black text-5xl">{activeWeather?.current.temperature_2m}º</span>
         </p>
-        <p className="italic mt-1">Sensación térmica de: {activeWeather?.current.apparent_temperature}</p>
+        <p className="italic mt-1">Sensación térmica de: {activeWeather?.current.apparent_temperature}º</p>
       </div>
       <div className="h-1/2 flex bg-gray-500/5 shadow">
         <div className=" h-full w-1/2 p-2">

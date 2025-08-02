@@ -21,7 +21,7 @@ export const LocationCard: FC<Props> = ({location}) => {
 
   return (
    
-        <li className="hover:bg-amber-100 h-fit w-full border-b-1 py-2 text-center" onClick={() => handleClick()}>{location.admin1}, {location.country}<br/>{location.latitude}, {location.longitude}</li>
+        <li className="hover:bg-amber-100 h-fit w-full border-b-1 py-2 text-center" onClick={() => handleClick()}>{location.name}, {location.country}<br/>{location.latitude}, {location.longitude}</li>
         
   )
 }

@@ -1,3 +1,4 @@
+import { Forecast } from "../Components/Forecast";
 import { Header } from "../Components/Header";
 import { TempHero } from "../Components/TempHero";
 import { useStoreWeather } from "../store/storeWeather";
@@ -11,6 +12,7 @@ export const MainScreen = () => {
     <div className={`min-h-[100vh] ${isDay ? dayBackground : nightBackground}`}>
     <Header/>
     <TempHero/>
+    <Forecast/>
     </div>
   );
 };
