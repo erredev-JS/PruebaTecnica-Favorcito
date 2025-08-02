@@ -57,7 +57,7 @@ export const TempHero = () => {
  <div className="h-[400px] w-[450px]  m-auto mt-10 rounded-2xl shadow-2xl overflow-hidden text-white text-xl bg-gray-500/30">
       <div className=" w-full h-1/2 p-2 ">
         <div className="flex justify-between">
-          <h1 className="font-bold">Tiempo en {activeGeolocation?.admin1}</h1>
+          <h1 className="font-bold">{`Tiempo en ${activeGeolocation?.name}`}</h1>
           <h1 className="font-bold">{activeGeolocation?.country}</h1>
         </div>
         <p className="text-2xl">
@@ -65,7 +65,7 @@ export const TempHero = () => {
         </p>
         <p className="italic mt-1">Sensación térmica de: {activeWeather?.current.apparent_temperature}º</p>
       </div>
-      <div className="h-1/2 flex bg-gray-500/5 shadow">
+      <div className="h-1/2 flex ">
         <div className=" h-full w-1/2 p-2">
           <img src={imgSelected} alt="" className="w-1/2 m-auto" />
           <p>{cloudCover}</p>

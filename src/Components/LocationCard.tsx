@@ -5,9 +5,10 @@ import { useStoreWeather } from "../store/storeWeather";
 
 interface Props {
   location: IGeolocation;
+  actual?: boolean
 }
 
-export const LocationCard: FC<Props> = ({ location }) => {
+export const LocationCard: FC<Props> = ({ location, actual }) => {
   const { setActiveGeolocation, setArrayGeolocations, setSearch } = useStoreGeolocation();
   const { setFirstSearch } = useStoreWeather();
 
@@ -20,7 +21,7 @@ export const LocationCard: FC<Props> = ({ location }) => {
   };
 
   return (
-    <li className="hover:bg-amber-100 h-fit w-[280px] border-b-1 py-2 text-center cursor-pointer" onClick={() => handleClick()}>
+    <li className={`${actual ? "bg-transparent" : ""}hover:bg-amber-100 h-fit w-[280px] border-b-blue-200 border-b-3 py-2 text-center cursor-pointer`} onClick={() => handleClick()}>
       {location.name}, {location.country}
       <br />
       {location.latitude}, {location.longitude}
