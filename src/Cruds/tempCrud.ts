@@ -1,7 +1,6 @@
 import axios from "axios";
 import type { IWeatherResponse } from "../types/IWeatherResponse";
 import { useStoreWeather } from "../store/storeWeather";
-import Swal from "sweetalert2";
 
 const BASE_URL = "https://api.open-meteo.com/v1/forecast";
 
@@ -46,9 +45,8 @@ export const getTempByLatAndLong = async (lat: number, long: number): Promise<IW
     });
 
     const response = await axios.get<IWeatherResponse>(`${BASE_URL}?${params}`);
-    
-    return response.data;
 
+    return response.data;
   } catch (error) {
     console.error("Error al obtener el clima:", error);
 

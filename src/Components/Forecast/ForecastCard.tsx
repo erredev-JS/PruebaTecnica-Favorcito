@@ -1,7 +1,7 @@
 import type { FC } from "react";
-import type { IForecast } from "../types/IForecast";
+import type { IForecast } from "../../types/IForecast";
 import { TemperatureIcon } from "./TemperatureIcon";
-import { clasificarTemperatura, getTodayAsString } from "../utils/utils";
+import { clasificarTemperatura, getTodayAsString } from "../../utils/utils";
 
 interface Props {
   location: IForecast;

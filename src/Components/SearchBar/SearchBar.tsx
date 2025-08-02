@@ -1,15 +1,15 @@
 import { useEffect, type ChangeEvent, type FormEvent } from "react";
-import { getCoordinatesByCountry } from "../Cruds/geoCrud";
+import { getCoordinatesByCountry } from "../../Cruds/geoCrud";
 import { LocationCard } from "./LocationCard";
-import { useStoreGeolocation } from "../store/storeGeolocation";
-import { useStoreWeather } from "../store/storeWeather";
+import { useStoreGeolocation } from "../../store/storeGeolocation";
+import { useStoreWeather } from "../../store/storeWeather";
 import Swal from "sweetalert2";
 
 export const SearchBar = () => {
   const { arrayGeolocations, setArrayGeolocations, searchGeolocation, setSearch, setActiveGeolocation } = useStoreGeolocation();
-  const { setFirstSearch, setActiveWeather } = useStoreWeather();
+  const { setFirstSearch } = useStoreWeather();
   useEffect(() => {
-    if (searchGeolocation.length < 3 || searchGeolocation.length == 0) {
+    if (searchGeolocation.length < 3 || searchGeolocation === "") {
       setArrayGeolocations([]);
       return;
     }

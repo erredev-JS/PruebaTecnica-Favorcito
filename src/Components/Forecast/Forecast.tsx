@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { useStoreGeolocation } from "../store/storeGeolocation";
-import { useStoreWeather } from "../store/storeWeather";
-import type { IWeatherResponse } from "../types/IWeatherResponse";
-import type { IForecast } from "../types/IForecast";
+
+import type { IForecast } from "../../types/IForecast";
+import { useStoreWeather } from "../../store/storeWeather";
 import { ForecastCard } from "./ForecastCard";
 
+
 export const Forecast = () => {
-  const { activeGeolocation } = useStoreGeolocation();
   const { activeWeather, loadingWeather } = useStoreWeather();
 
   const [arrayForecast, setArrayForecast] = useState<IForecast[]>([]);

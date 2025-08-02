@@ -1,11 +1,11 @@
 import React, { type FC } from "react";
-import type { IGeolocation } from "../types/IGeolocation";
-import { useStoreGeolocation } from "../store/storeGeolocation";
-import { useStoreWeather } from "../store/storeWeather";
+import type { IGeolocation } from "../../types/IGeolocation";
+import { useStoreGeolocation } from "../../store/storeGeolocation";
+import { useStoreWeather } from "../../store/storeWeather";
 
 interface Props {
   location: IGeolocation;
-  actual?: boolean
+  actual?: boolean;
 }
 
 export const LocationCard: FC<Props> = ({ location, actual }) => {
