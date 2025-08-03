@@ -32,7 +32,7 @@ export const TempHero = () => {
       {loadingWeather ? (
         <Loading />
       ) : (
-        <div className="h-[400px] w-[500px]   m-auto mt-10 rounded-2xl shadow-2xl overflow-hidden text-white text-xl bg-gray-500/30 border">
+        <div className="h-[400px] w-8/10 max-w-[500px] min-w-[300px]   m-auto mt-10 rounded-2xl shadow-2xl overflow-hidden text-white text-xl bg-gray-500/30 border">
           <div className=" w-full h-1/2 p-2 px-6 ">
             <div className="flex justify-between">
               <h1 className="font-bold">{`Tiempo en ${activeGeolocation?.name}`}</h1>

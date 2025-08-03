@@ -44,17 +44,17 @@ export const SearchBar = () => {
   };
 
   return (
-    <div className="flex items-center rounded-2xl overflow-hidden">
-      <form className="flex  flex-row justify-center items-center" onSubmit={(e) => handleSubmit(e)}>
-        <input type="text" placeholder="Buscar ciudad/país..." className="bg-white px-2 py-1 relative select-none focus:outline-none" value={searchGeolocation} onChange={(e) => handleChange(e)} />
+    <div className="flex items-center rounded-2xl overflow-hidden border-2 text-white w-5/10 min-w-[150px] max-w-[250px]">
+      <form className="flex  flex-row justify-center items-center " onSubmit={(e) => handleSubmit(e)}>
+        <input type="text" placeholder="Buscar ciudad/país..." className="bg-transparent px-2 py-1 relative select-none focus:outline-none w-3/3" value={searchGeolocation} onChange={(e) => handleChange(e)} />
         {arrayGeolocations.length > 1 && (
-          <ul className="bg-white absolute top-12  rounded  z-10 h-[300px] overflow-auto">
+          <ul className="bg-white absolute top-14 right-7 rounded  z-10 h-[300px] overflow-auto text-black">
             {arrayGeolocations.map((location, index) => (
               <LocationCard key={index} location={location} />
             ))}
           </ul>
         )}
-        <button className="bg-blue-600 cursor-pointer py-1 px-2  hover:bg-blue-300" type="submit">
+        <button className="bg-transparent cursor-pointer py-1 px-2  hover:bg-blue-300 border-l " type="submit">
           <img src="./svg/search.svg" alt="" />
         </button>
       </form>

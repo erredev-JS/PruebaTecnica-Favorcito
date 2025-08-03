@@ -7,7 +7,7 @@ const getColor = (tipo: TempType) => {
     case "templada":
       return "#FFC107"; // amarillo
     case "cálida":
-      return "#F44336"; // rojo
+      return "#e67067"; // rojo
   }
 };
 
