@@ -40,8 +40,8 @@ Aplicación web del clima que permite buscar una ciudad y visualizar informació
 1. Cloná el repo:
 
    ```bash
-   git clone https://github.com/tu-usuario/tu-repo.git
-   cd tu-repo
+   git clonehttps://github.com/erredev-JS/PruebaTecnica-Favorcito.git
+   cd PruebaTecnica-Favorcito
    ```
 
 2. Instalá dependencias:
