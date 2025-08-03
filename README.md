@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌤️ WeatherApp
 
-Currently, two official plugins are available:
+Aplicación web del clima que permite buscar una ciudad y visualizar información meteorológica actual y del pronóstico diario, usando datos de la API de [Open-Meteo](https://open-meteo.com/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Demo
 
-## Expanding the ESLint configuration
+👉 [Ver en GitHub Pages](https://tu-usuario.github.io/tu-repo/)  
+*(reemplazar con el link real una vez desplegado)*
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧠 Tecnologías utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- ⚛️ **React + TypeScript** – UI moderna y tipada
+- ⚡ **Vite** – Empaquetador ultrarrápido
+- 🌪️ **Zustand** – Manejo de estado global
+- 📦 **Axios** – Llamadas HTTP a APIs
+- 🌤️ **Open-Meteo API** – Datos meteorológicos actualizados
+- 🎨 **Tailwind CSS** – Estilizado rápido y responsive
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📸 Características
+
+- Búsqueda de ciudades con autocompletado
+- Visualización del clima actual:
+  - Temperatura real y aparente
+  - Velocidad del viento
+  - Humedad relativa
+  - Cobertura de nubes
+- Pronóstico extendido por días
+- Cambio dinámico de imágenes según el estado del cielo y si es de día o de noche
+- Persistencia de estado (`firstSearch`, `activeWeather`) con Zustand y `persist`
+- UI responsive y moderna
+
+---
+
+## 🛠️ Instalación local
+
+1. Cloná el repo:
+
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repo.git
+   cd tu-repo
+   ```
+
+2. Instalá dependencias:
+
+   ```bash
+   npm install
+   ```
+
+3. Ejecutá en modo desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🧾 Scripts disponibles
+
+| Comando         | Descripción                          |
+|-----------------|--------------------------------------|
+| `npm run dev`   | Inicia el servidor de desarrollo     |
+| `npm run build` | Compila la app para producción       |
+| `npm run preview` | Previsualiza la app en producción |
+| `npm run deploy`| Publica en GitHub Pages              |
+
+---
+
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+src/
+│
+├── components/         # Tarjetas del clima, íconos, etc.
+├── services/           # Lógica para consumir Open-Meteo
+├── store/              # Estado global con Zustand
+├── utils/              # Funciones reutilizables (fecha, clasificación, imágenes)
+├── assets/             # Imágenes SVG del clima
+└── App.tsx             # Componente raíz
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📌 To Do / Mejoras futuras
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+- [ ] Agregar favoritos o ciudades guardadas
+
+
+---
+
+## 📄 Licencia
+
+MIT — Libre de usar, modificar y distribuir.
+
+---
+
+## 🙌 Autor
+
+Desarrollado por [Rodrigo Zapata](https://github.com/rodrigozapata).  
+Estudiante de la UTN – Técnico Universitario en Programación.  
+¡Gracias por visitar el proyecto! 😊

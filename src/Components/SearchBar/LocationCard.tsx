@@ -1,4 +1,4 @@
-import React, { type FC } from "react";
+import { type FC } from "react";
 import type { IGeolocation } from "../../types/IGeolocation";
 import { useStoreGeolocation } from "../../store/storeGeolocation";
 import { useStoreWeather } from "../../store/storeWeather";

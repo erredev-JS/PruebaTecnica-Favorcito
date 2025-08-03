@@ -23,16 +23,16 @@ export function getImgSelectedWeatherState(activeWeather: IWeatherResponse | und
     if (cover > 75) {
       return {
         cloudCover: "Mayormente nublado",
-        imgSelected: "/svg/cloudy.svg",
+        imgSelected: "./svg/cloudy.svg",
       };
     } else if (cover > 50) {
       return {
-        imgSelected: isDay ? "/svg/partlyCloudy.svg" : "/svg/cloudyMoon.svg",
+        imgSelected: isDay ? "/svg/partlyCloudy.svg" : "./svg/cloudyMoon.svg",
         cloudCover: "Parcialmente nublado",
       };
     } else {
       return {
-        imgSelected: isDay ? "/svg/sunny.svg" : "/svg/moon.svg",
+        imgSelected: isDay ? "./svg/sunny.svg" : "./svg/moon.svg",
         cloudCover: "Despejado",
       };
     }
@@ -41,6 +41,6 @@ export function getImgSelectedWeatherState(activeWeather: IWeatherResponse | und
   // Por defecto, si no hay datos válidos
   return {
     cloudCover: "Sin información",
-    imgSelected: "/svg/unknown.svg",
+    imgSelected: "https://www.flaticon.com/free-icon/unknown_5978100",
   };
 }

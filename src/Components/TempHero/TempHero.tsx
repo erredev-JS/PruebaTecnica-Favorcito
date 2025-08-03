@@ -50,7 +50,7 @@ export const TempHero = () => {
               <p>Humedad: {activeWeather?.current.relative_humidity_2m}%</p>
             </div>
             <div className="bg-black-500 h-full w-1/2 p-2 px-6 ">
-              <img src="/svg/wind.svg" alt="" className="w-1/2 m-auto" />
+              <img src="./svg/wind.svg" alt="" className="w-1/2 m-auto" />
               <p>Viento: {activeWeather?.current.wind_speed_10m} km/h</p>
             </div>
           </div>
