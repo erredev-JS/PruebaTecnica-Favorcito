@@ -27,7 +27,7 @@ export function getImgSelectedWeatherState(activeWeather: IWeatherResponse | und
       };
     } else if (cover > 50) {
       return {
-        imgSelected: isDay ? "/svg/partlyCloudy.svg" : "./svg/cloudyMoon.svg",
+        imgSelected: isDay ? "./svg/partlyCloudy.svg" : "./svg/cloudyMoon.svg",
         cloudCover: "Parcialmente nublado",
       };
     } else {
