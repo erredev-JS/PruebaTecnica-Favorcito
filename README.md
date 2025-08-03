@@ -5,8 +5,7 @@ Aplicación web del clima que permite buscar una ciudad y visualizar informació
 
 ## 🚀 Demo
 
-👉 [Ver en GitHub Pages](https://tu-usuario.github.io/tu-repo/)  
-*(reemplazar con el link real una vez desplegado)*
+👉 [Ver en GitHub Pages](https://erredev-js.github.io/PruebaTecnica-Favorcito/)  
 
 ---
 
