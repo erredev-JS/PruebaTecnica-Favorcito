@@ -9,10 +9,10 @@ interface Props {
 }
 export const ForecastCard: FC<Props> = ({ location }) => {
   const [year, month, day] = location.date.split("-").map(Number);
-  const dateObj = new Date(year, month - 1, day); 
-  const today = getTodayAsString()
+  const dateObj = new Date(Date.UTC(year, month - 1, day));
+  const today = getTodayAsString();
 
-  const actual = today === location.date
+  const actual = today === location.date;
 
   // Lo transformamos a dia de la semana en español
 
@@ -22,7 +22,6 @@ export const ForecastCard: FC<Props> = ({ location }) => {
   const mediaTemp = (location.temperature_2m_min + location.temperature_2m_max) / 2;
 
   let tempString = clasificarTemperatura(mediaTemp);
-
   return (
     <div className={`${actual ? "border-2 border-blue-500" : ""} bg-white/70 w-full rounded-2xl px-3 py-2 shadow max-w-[600px] m-auto`}>
       <div className="flex justify-between border-b-2">

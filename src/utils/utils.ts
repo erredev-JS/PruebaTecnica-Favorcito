@@ -15,6 +15,15 @@ export function getTodayAsString(): string {
   return `${year}-${month}-${day}`;
 }
 
+// Formatea la hora a formato 12h en español
+ export  function formatHour(hourString: string): string {
+    const date = new Date(hourString);
+    return new Intl.DateTimeFormat("es-AR", {
+      hour: "numeric",
+      hour12: true,
+    }).format(date);
+  }
+
 export function getImgSelectedWeatherState(activeWeather: IWeatherResponse | undefined) {
   const isDay = activeWeather?.current.is_day;
 
