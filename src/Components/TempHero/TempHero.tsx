@@ -71,7 +71,7 @@ export const TempHero = () => {
             <p className="italic mt-1">Sensación térmica de: {activeWeather?.current.apparent_temperature}º</p>
             <p>Humedad: {activeWeather?.current.relative_humidity_2m}%</p>
           </div>
-          <div className="flex gap-5  justify-between px-2">
+          <div className="flex gap-5  justify-between px-6">
             {hourlyTemp.map((hourlyData) => (
               <>
                 <HourlyTempCard key={hourlyData.time} hourlyTemp={hourlyData} />
