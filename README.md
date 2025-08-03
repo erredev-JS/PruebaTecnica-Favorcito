@@ -28,6 +28,7 @@ Aplicación web del clima que permite buscar una ciudad y visualizar informació
   - Velocidad del viento
   - Humedad relativa
   - Cobertura de nubes
+  - Temperatura durante el día en horas clave
 - Pronóstico extendido por días
 - Cambio dinámico de imágenes según el estado del cielo y si es de día o de noche
 - Persistencia de estado (`firstSearch`, `activeWeather`) con Zustand y `persist`

@@ -1,5 +1,5 @@
 import { useEffect, type ChangeEvent, type FormEvent } from "react";
-import { getCoordinatesByCountry } from "../../Cruds/geoCrud";
+import { getCoordinatesByCountry } from "../../Services/geoCrud";
 import { LocationCard } from "./LocationCard";
 import { useStoreGeolocation } from "../../store/storeGeolocation";
 import { useStoreWeather } from "../../store/storeWeather";

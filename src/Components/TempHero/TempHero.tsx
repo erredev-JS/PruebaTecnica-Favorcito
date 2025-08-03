@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useStoreGeolocation } from "../../store/storeGeolocation";
-import { getTempByLatAndLong } from "../../Cruds/tempCrud";
+import { getTempByLatAndLong } from "../../Services/tempCrud";
 import { useStoreWeather } from "../../store/storeWeather";
 import { Loading } from "../Loading/Loading";
 import { formatHour, getImgSelectedWeatherState } from "../../utils/utils";
@@ -74,7 +74,7 @@ export const TempHero = () => {
           <div className="flex gap-5 bg-gray-500/40 justify-between px-2 ">
             {hourlyTemp.map((hourlyData) => (
               <>
-                <HourlyTempCard hourlyTemp={hourlyData} />
+                <HourlyTempCard key={hourlyData.time} hourlyTemp={hourlyData} />
               </>
             ))}
           </div>
